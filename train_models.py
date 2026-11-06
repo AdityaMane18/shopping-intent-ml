@@ -48,6 +48,10 @@ from src.models.naive_bayes import (
     build_estimator as build_naive_bayes
 )
 
+from src.models.svm import (
+    build_estimator as build_svm
+)
+
 
 # -------------------------------------------------------
 # PROJECT PATHS
@@ -73,7 +77,8 @@ MODEL_BUILDERS = {
     "logistic_regression": build_logistic_regression,
     "decision_tree": build_decision_tree,
     "knn": build_knn,
-    "naive_bayes": build_naive_bayes
+    "naive_bayes": build_naive_bayes,
+    "svm": build_svm
 }
 
 
@@ -90,7 +95,8 @@ def train_and_evaluate(model_name):
     "logistic_regression": "Logistic Regression",
     "decision_tree": "Decision Tree",
     "knn": "KNN",
-    "naive_bayes": "Gaussian Naive Bayes"
+    "naive_bayes": "Gaussian Naive Bayes",
+    "svm": "Support Vector Machine"
     }
 
     display_name = MODEL_DISPLAY_NAMES[model_name]
