@@ -44,6 +44,10 @@ from src.models.knn import (
     build_estimator as build_knn
 )
 
+from src.models.naive_bayes import (
+    build_estimator as build_naive_bayes
+)
+
 
 # -------------------------------------------------------
 # PROJECT PATHS
@@ -68,7 +72,8 @@ RESULTS_DIR = PROJECT_ROOT / "results"
 MODEL_BUILDERS = {
     "logistic_regression": build_logistic_regression,
     "decision_tree": build_decision_tree,
-    "knn": build_knn
+    "knn": build_knn,
+    "naive_bayes": build_naive_bayes
 }
 
 
@@ -82,9 +87,10 @@ def train_and_evaluate(model_name):
 
     # Use readable names when displaying and saving model results.
     MODEL_DISPLAY_NAMES = {
-        "logistic_regression": "Logistic Regression",
-        "decision_tree": "Decision Tree",
-        "knn": "KNN"
+    "logistic_regression": "Logistic Regression",
+    "decision_tree": "Decision Tree",
+    "knn": "KNN",
+    "naive_bayes": "Gaussian Naive Bayes"
     }
 
     display_name = MODEL_DISPLAY_NAMES[model_name]
