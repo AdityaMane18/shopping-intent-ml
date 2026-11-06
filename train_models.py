@@ -40,6 +40,10 @@ from src.models.decision_tree import (
     build_estimator as build_decision_tree
 )
 
+from src.models.knn import (
+    build_estimator as build_knn
+)
+
 
 # -------------------------------------------------------
 # PROJECT PATHS
@@ -63,7 +67,8 @@ RESULTS_DIR = PROJECT_ROOT / "results"
 
 MODEL_BUILDERS = {
     "logistic_regression": build_logistic_regression,
-    "decision_tree": build_decision_tree
+    "decision_tree": build_decision_tree,
+    "knn": build_knn
 }
 
 
@@ -75,7 +80,14 @@ def train_and_evaluate(model_name):
         model_name: Name of the classifier to train.
     """
 
-    display_name = model_name.replace("_", " ").title()
+    # Use readable names when displaying and saving model results.
+    MODEL_DISPLAY_NAMES = {
+        "logistic_regression": "Logistic Regression",
+        "decision_tree": "Decision Tree",
+        "knn": "KNN"
+    }
+
+    display_name = MODEL_DISPLAY_NAMES[model_name]
 
     print(f"\n{display_name.upper()} MODEL TRAINING")
     print("=" * 50)
