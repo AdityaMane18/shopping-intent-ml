@@ -111,6 +111,16 @@ The positive class for precision, recall, and F1 is **`Revenue = True` (Purchase
 | **SVM** | The baseline calibrated SVM has the **highest precision (0.7450)**, meaning its positive predictions are comparatively trustworthy. However, recall is only 0.4895, and tuning provided only a small cross-validation MCC improvement. |
 | **Overall winner for this dataset** | **Tuned Decision Tree**, selected using training-only cross-validation and confirmed on the held-out test set with **MCC = 0.6101**. It provides the strongest overall balance among the evaluated models. |
 
+### Final Model Selection Justification
+
+The Tuned Decision Tree was selected as the final model because it achieved the highest Matthews Correlation Coefficient (MCC = 0.5928) during stratified five-fold cross-validation on the training dataset.
+
+MCC was used as the primary selection metric because the dataset is imbalanced, with approximately 15.6% purchase sessions.
+
+After selection, the model was evaluated on the held-out test dataset, achieving an MCC of 0.6101, accuracy of 0.9017, F1 score of 0.6657, and ROC AUC of 0.9271.
+
+These results demonstrate that the Tuned Decision Tree provides the strongest overall performance among the evaluated classifiers. The held-out test dataset was not used for hyperparameter tuning or model selection.
+
 The winning model's confusion matrix on the original held-out test set is:
 
 | Actual / Predicted | No Purchase | Purchase |
