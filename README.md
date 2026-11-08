@@ -73,6 +73,8 @@ The source dataset is distributed under the **Creative Commons Attribution 4.0 I
 
 **Live Streamlit Application:** https://shopping-intent-ml.streamlit.app/
 
+**Test Dataset:** [Download test_data.csv](https://github.com/AdityaMane18/shopping-intent-ml/blob/main/test_data.csv)
+
 ## 4. Models Used and Evaluation Metrics
 
 All five classifiers use the same dataset and preprocessing workflow. Baseline and tuned candidates were assessed using **stratified five-fold cross-validation on the training set**, with MCC as the primary selection criterion. After selecting the model version, its saved fitted pipeline was evaluated on the **2,441-row held-out test set**.
@@ -269,3 +271,20 @@ Additional pages/tabs document the problem and dataset, exploratory analysis, mo
 **Current distinction:** The selected-model evaluation cards and diagnostics are based on the **currently uploaded CSV**. The **Overall Report tab** displays the saved official 2,441-row benchmark from `results/final/final_model_comparison.csv`; it does **not** recalculate the five-model comparison for each upload. This design keeps the official experimental results separate from ad-hoc examiner uploads.
 
 **Current upload restrictions:** use a CSV named `test_data.csv`, with at most 2,441 rows and a maximum file size of 2 MB, as indicated in the app's upload guidance. ROC AUC requires both target classes to be present in the uploaded labeled data.
+
+### How to Use the Application
+
+**Option 1 — Interactive Model Evaluation**
+
+1. Select a classification model from the sidebar.
+2. Download the provided [test_data.csv](https://github.com/AdityaMane18/shopping-intent-ml/blob/main/test_data.csv).
+3. Upload the CSV file to the application.
+4. Click **Evaluate model** to view the evaluation metrics, confusion matrix, and classification report.
+
+**Option 2 — View Predefined Results**
+
+Navigate to the **Overall Report** tab to view the saved final evaluation results and performance comparisons for all five classification models.
+
+No dataset upload is required to view the Overall Report.
+
+**Note:** Model Evaluation calculates results using the uploaded dataset, whereas Overall Report displays the predefined results from the original 2,441-row held-out test dataset.
