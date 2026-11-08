@@ -63,7 +63,7 @@ TRAIN_PATH = PROJECT_ROOT / "data" / "train_data.csv"
 TEST_PATH = PROJECT_ROOT / "test_data.csv"
 
 MODEL_DIR = PROJECT_ROOT / "model" / "baseline"
-RESULTS_DIR = PROJECT_ROOT / "results"
+RESULTS_DIR = PROJECT_ROOT / "results" / "baseline"
 
 
 # -------------------------------------------------------
