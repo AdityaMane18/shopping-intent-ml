@@ -69,7 +69,9 @@ The source dataset is distributed under the **Creative Commons Attribution 4.0 I
 
 ## 3. GitHub Repository Link
 
-**Repository:** [shopping-intent-ml](https://github.com/AdityaMane18/shopping-intent-ml)
+**GitHub Repository:** https://github.com/AdityaMane18/shopping-intent-ml
+
+**Live Streamlit Application:** https://shopping-intent-ml.streamlit.app/
 
 ## 4. Models Used and Evaluation Metrics
 
