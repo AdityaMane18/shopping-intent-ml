@@ -135,7 +135,7 @@ def evaluate_final_models():
         version = record["Selected_Version"]
 
         model_path = (
-            PROJECT_ROOT / record["Model_Path"]
+        PROJECT_ROOT / str(record["Model_Path"]).replace("\\", "/")
         )
 
         if not model_path.exists():
