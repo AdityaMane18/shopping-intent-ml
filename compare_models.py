@@ -37,7 +37,7 @@ import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 
-RESULTS_DIR = PROJECT_ROOT / "results"
+RESULTS_DIR = PROJECT_ROOT / "results" / "baseline"
 
 OUTPUT_PATH = RESULTS_DIR / "model_comparison.csv"
 
